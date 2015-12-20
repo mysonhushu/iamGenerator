@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/dao/Dao.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/util/StringUtils.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/util/DateUtils.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/util/CommentUtils.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/bean/TableInfo.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/genrator/SqlBeanGenerator.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/config/SystemLoad.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/util/FileUtils.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/bean/SQLColumn.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/dao/GeneratorDao.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/mysql/sql/GeneratorSql.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/db/ConnSource.java</file>
+            <file>file:/D:/my-git-workspace/beanGenerator/iamGenerator/src/com/iamgenerator/genrator/JavaBeanGenerator.java</file>
+        </group>
+    </open-files>
+</project-private>
