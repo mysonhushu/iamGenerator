@@ -1,6 +1,4 @@
-This is a project for create java bean clas.Just now it support mysql only. you
-This is a project for create java bean clas.Just now it support mysql only. you
-This is a project for create java bean clas.Just now it support mysql only. you
+This is a project for create java bean class.Just now it support mysql only. you
  can config the database information and run the main method. the program can a
 utomatically make out all the classe files of the database tables.
 By the way,it is building....
