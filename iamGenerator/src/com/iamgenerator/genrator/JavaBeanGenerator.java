@@ -149,17 +149,6 @@ public class JavaBeanGenerator {
         classComment =  CommentUtils.getClassComment(0, this.tablename.toUpperCase(), 
         ControlCenter.kv.get(this.tablename.toLowerCase()), "kado(631930821@qq.com)", 
         "成都市致力行科技有限公司(http://www.iamaction.cn)",DateUtils.getJustDate());
-        
-//        if(ControlCenter.kv.containsKey(this.tablename.toLowerCase()))
-//        {
-//            classComment =  CommentUtils.getClassComment(0, this.tablename.toUpperCase(), 
-//                ControlCenter.kv.get(this.tablename.toLowerCase()), "kado(631930821@qq.com)", 
-//                 "成都市致力行科技有限公司(http://www.iamaction.cn)",DateUtils.getJustDate());
-//        }else{
-//            classComment =  CommentUtils.getClassComment(0, this.tablename.toUpperCase(), 
-//                "普通的java bean类", "kado(631930821@qq.com)", 
-//                "成都市致力行科技有限公司(http://www.iamaction.cn)", DateUtils.getJustDate());
-//        }
         return classComment;
     }
 }

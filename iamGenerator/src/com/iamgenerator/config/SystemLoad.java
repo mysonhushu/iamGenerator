@@ -5,7 +5,6 @@
  */
 package com.iamgenerator.config;
 
-import com.iamgenerator.genrator.JavaBeanGenerator;
 import com.iamgenerator.bean.SQLColumn;
 import com.iamgenerator.bean.TableInfo;
 import com.iamgenerator.dao.GeneratorDao;

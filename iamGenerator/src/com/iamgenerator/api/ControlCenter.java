@@ -8,6 +8,7 @@ package com.iamgenerator.api;
 import com.iamgenerator.bean.TableInfo;
 import com.iamgenerator.config.SystemLoad;
 import com.iamgenerator.dao.GeneratorDao;
+import com.iamgenerator.genrator.DaoBeanGenerator;
 import com.iamgenerator.genrator.JavaBeanGenerator;
 import com.iamgenerator.genrator.SqlBeanGenerator;
 import com.iamgenerator.util.FileUtils;
@@ -28,7 +29,8 @@ public class ControlCenter {
     public void process(){
         tableInfoList = GeneratorDao.getInstance().getAllTableAndColumnsInfo();
 //        this.generatJavaBean();
-        this.generatSqlBean();
+//        this.generatSqlBean();
+        this.generatDaoBean();
          
     }
     
@@ -38,8 +40,8 @@ public class ControlCenter {
     public void generatJavaBean()
     {
         //生成Javabean对象
-        String beanPackage = "cn.iamaction.carbme.bean";
-        String beanPath = "D:\\myeclipseWorkspace\\carbme_bean\\src\\cn\\iamaction\\carbme\\bean";
+        String beanPackage = "cn.iamaction.carbmebg.bean";
+        String beanPath = "D:\\myeclipseWorkspace\\carbmeBackGroud\\src\\cn\\iamaction\\carbmebg\\bean";
         int size=tableInfoList.size();
         for(int i=0; i<size; i++)
         {
@@ -55,14 +57,29 @@ public class ControlCenter {
      */
     public void generatSqlBean()
     {
-        String sqlBeanPackage = "";
-        String sqlBeanPath = "";
+        String sqlBeanPackage = "cn.iamaction.carbmebg.dao";
+        String sqlBeanPath = "D:\\myeclipseWorkspace\\carbmeBackGroud\\src\\cn\\iamaction\\carbmebg\\dao";
         String className = "CarbmeDaoSql";
         //生成DaoSql文件
         SqlBeanGenerator daoSql = new SqlBeanGenerator(sqlBeanPackage,
                                                             className,
                                                          tableInfoList,
                                                            sqlBeanPath);
+        daoSql.generateSqlBean(sqlBeanPath);
+    }
+    
+    /**
+     * 生成Dao Bean 对象
+     */
+    public void generatDaoBean()
+    {
+       String sqlBeanPackage = "cn.iamaction.carbmebg.dao";
+       String sqlBeanPath = "D:\\myeclipseWorkspace\\carbmeBackGroud\\src\\cn\\iamaction\\carbmebg\\dao";
+       String className = "CarbmeDao";
+       DaoBeanGenerator daoSql = new DaoBeanGenerator(sqlBeanPackage, 
+                                                            className,
+                                                          tableInfoList,
+                                                            sqlBeanPath);
     }
     
     public static void main(String args[])
@@ -70,4 +87,7 @@ public class ControlCenter {
         ControlCenter cc = new ControlCenter();
         cc.process();
     }
+    
+      
+           
 }

@@ -185,14 +185,16 @@ public class StringUtils {
      * @param width 想要获取的宽度
      * @param isEnd 是否是最后一个字符串
      * @param isSurround 是否被双引号包围
+     * @param addSemicolon 是否添加分号
      * @return  格式化后的字符串
      */
     public static String getAFixedWidthString(String value,
                                                     int width,
                                                 boolean isEnd,
-                                               boolean isSurround)
+                                                int beforeBlankWidth,
+                                               boolean isSurround,boolean addSemicolon)
     {
-        return getAFixedWidthString(value,width,isEnd,8,"\"","+",isSurround);
+        return getAFixedWidthString(value,width,isEnd,beforeBlankWidth,"\"","+",isSurround,addSemicolon);
     }
     /**
      * 根据给定的字符串获取固定宽度的字符串,用于产生sql格式化显示字段
@@ -203,6 +205,7 @@ public class StringUtils {
      * @param connectStr 字符串连接符号
      * @param isEnd 是否是最后一个字符串
      * @param isSurround 是否被双引号包围
+     * @param addSemicolon 是否添加分号
      * @return  格式化后的字符串
      */
     public static String getAFixedWidthString(String value,
@@ -211,7 +214,7 @@ public class StringUtils {
                                                    int beforeBlankWidth,
                                                    String surroundStr,
                                                    String connectStr,
-                                                   boolean isSurround){
+                                                   boolean isSurround,boolean addSemicolon){
         StringBuffer sb = new StringBuffer();
         //如果传入的字符串为null,就返回
         if(!StringHasValue(value))
@@ -273,12 +276,21 @@ public class StringUtils {
                 if(!isEnd){
                      sb.append(connectStr+"\r\n");
                 }else{
-                    sb.append(";\r\n");
+                    if(addSemicolon){
+                        sb.append(";\r\n");
+                    }else{
+                        sb.append("\r\n");
+                    }
+                   
                 }
             }else {
                 //如果结束了，添加分号
                 if(isEnd){
-                    sb.append(";\r\n");
+                    if(addSemicolon){
+                        sb.append(";\r\n");
+                    }else{
+                        sb.append("\r\n");
+                    }
                 } 
             }
         }
